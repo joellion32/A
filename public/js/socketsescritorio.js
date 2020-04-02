@@ -6,7 +6,12 @@ console.log('Servidor contectado');
 });
 
 socket.on('disconnect', function(){
-console.log('Servidor Desconectado');
+$.smallBox({
+  title:"Error",
+  content:"Desconexion con el servidor",
+  fa:"fa-star-o",
+  timeout:4000,
+});
 });
 
 
@@ -20,7 +25,7 @@ throw new Error('El escritorio es necesario');
  var escritorio = searchParams.get('escritorio');
  $("h1").text("Escritorio " + escritorio);
 
-$("button").on('click', function() { 
+$("#atender").on('click', function() { 
    socket.emit('atenderTicket', {escritorio: escritorio}, function(resp){
 
     if(resp === 'No hay tickets'){
@@ -30,6 +35,17 @@ $("button").on('click', function() {
     }
     $("small").text(resp.numero);
     });
-    
+});
+
+
+// function para cerrar escritorio
+$("#cerrar").on('click', function (numero, status) {
+numero = escritorio;
+status = false;
+socket.emit('ActualizarData2', {
+numero: numero,
+status: status
+});
+window.location = "/";
 });
  

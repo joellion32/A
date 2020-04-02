@@ -14,6 +14,7 @@ module.exports.io = SocketIO(server);
 // importar sockets
 require('../server/sockets/socket.io');
 
+
 // static files
 app.use(express.static(path.resolve(__dirname ,'../public')));
 

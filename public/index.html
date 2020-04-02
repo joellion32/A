@@ -1,41 +1,116 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Sistema de Colas</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Programa de Colas</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/cover/">
 
+    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
+   <!-- Metro Notification Style -->
+   <link rel="stylesheet" type="text/css" href="css/MetroNotificationStyle.min.css">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-<body class="container">
-    <h1>Programa de Colas</h1>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <h1 class="cover-heading">Sistema de Tickets</h1>
+  </header>
 
-    <div class="row">
-        <div class="col-6">
-
-            <a class="btn btn-primary" href="publico.html">Pantalla publica</a>
-            <a class="btn btn-secondary" href="nuevo-ticket.html">Crear Tickets</a>
-
+  <main role="main" class="inner cover">
+    <div class="card-group m-2">
+        <div class="card" onclick="enviar(1, true)">
+          <img src="images/imac.png" class="card-img-top imagen" alt="...">
+          <smal id="escritorio1"></small><br>
+          <smal id="uso1"></small>
         </div>
 
-        <div class="col-6">
-            <form action="escritorio.html">
-                <input name="escritorio" type="number" class="form-control" placeholder="Escritorio" autofocus required>
-
-                <br>
-                <button type="submit" class="btn btn-primary">
-                    Ingresar
-                </button>
-            </form>
+        <div class="card" onclick="enviar(2, true)">
+          <img src="images/imac.png" class="card-img-top imagen" alt="...">
+          <smal id="escritorio2"></small><br>
+          <smal id="uso2"></small>
         </div>
+
+        <div class="card" onclick="enviar(3, true)">
+          <img src="images/imac.png" class="card-img-top imagen" alt="...">
+          <smal id="escritorio3"></small><br>
+          <smal id="uso3"></small>
+        </div>
+
+        <div class="card" onclick="enviar(4, true)">
+          <img src="images/imac.png" class="card-img-top imagen" alt="...">
+          <smal id="escritorio4"></small><br>
+          <smal id="uso4"></small>
+        </div>
+      </div>
+
+      <div class="card-group m-2">
+        <div class="card" onclick="enviar(5, true)">
+          <img src="images/imac.png" class="card-img-top imagen" alt="...">
+          <smal id="escritorio5"></small><br>
+          <smal id="uso5"></small>
+        </div>
+
+        <div class="card" onclick="enviar(6, true)">
+          <img src="images/imac.png" class="card-img-top imagen" alt="...">
+          <smal id="escritorio6"></small><br>  
+          <smal id="uso6"></small>
+        </div>
+
+        <div class="card" onclick="enviar(7, true)">
+          <img src="images/imac.png" class="card-img-top imagen" alt="...">
+          <smal id="escritorio7"></small><br>
+          <smal id="uso7"></small>  
+        </div>
+
+        <div class="card" onclick="enviar(8, true)">
+          <img src="images/imac.png" class="card-img-top imagen" alt="...">
+          <smal id="escritorio8"></small><br>
+          <smal id="uso8"></small>  
+        </div>
+      </div>
+  </main>
+<br>
+
+  <main role="main" class="inner cover">
+    <a class="btn btn-primary btn-lg btn-block" href="publico.html">Pantalla publica</a>
+    <a class="btn btn-secondary btn-lg btn-block" href="nuevo-ticket.html">Crear Tickets</a>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
     </div>
+  </footer>
+</div>
 
-    <script src="js/libs/jquery.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/sockets.js"></script>
+<script src="js/libs/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/sockets.index.js"></script>
+<!-- Metro Notification JS -->
+<script src="js/libs/MetroNotification.js"></script>
+
 </body>
-
 </html>
