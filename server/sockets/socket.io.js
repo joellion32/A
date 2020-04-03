@@ -57,18 +57,9 @@ escritorios: escritorio.getEscritorios()
 client.on('ActualizarData', (data) => {   
 client.broadcast.emit('Actualizar', {
 numero: data.numero, 
-estatus: data.status,    
+estado: data.status,    
 status: escritorio.ActualizarEscritorio(data.numero, data.status)
 });    
 });
-
-client.on('ActualizarData2', (data) => {   
-client.broadcast.emit('Actualizar2', {
-numero: data.numero, 
-estatus: data.status,    
-status: escritorio.ActualizarEscritorio(data.numero, data.status)
-});    
-});
-
 
 }); // cierre del ion

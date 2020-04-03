@@ -52,15 +52,17 @@ return this.escritorios;
 }
 
 
-ActualizarEscritorio(numero, status){    
+ActualizarEscritorio(numero, status){  
+console.log(numero);  
+console.log(status);    
 this.getEscritorios();
 let index = this.escritorios.findIndex(escritoro => escritoro.numero === numero);
 
-if(index >= 0 && status == true){    
+if(index >= 0){    
 this.escritorios[index].status = status;
 this.guardarData();    
 }else{
-console.log('ERROR');
+console.log(Error);
 }
 }
 

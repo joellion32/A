@@ -48,8 +48,11 @@ ActualizarDOM(data.escritorios);
 });
 
 socket.on('Actualizar', function(data){  
-console.log(data.status);    
-$(`#escritorio${data.numero}`).html(`Escritorio ${data.numero} </br> (En Uso)`)
+if(data.estado == true){    
+$(`#escritorio${data.numero}`).html(`Escritorio ${data.numero} </br> (En Uso)`);
+}else{
+$(`#escritorio${data.numero}`).html(`Escritorio ${data.numero} </br> (Sin Usar)`); 
+}
 });
 
 });

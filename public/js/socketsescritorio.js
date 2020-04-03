@@ -40,9 +40,9 @@ $("#atender").on('click', function() {
 
 // function para cerrar escritorio
 $("#cerrar").on('click', function (numero, status) {
-numero = escritorio;
+numero = Number(escritorio);
 status = false;
-socket.emit('ActualizarData2', {
+socket.emit('ActualizarData', {
 numero: numero,
 status: status
 });
